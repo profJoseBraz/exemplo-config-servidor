@@ -14,6 +14,38 @@ export const getUsers = (_, res) => {
     });
 }
 
+export const getUsersById = (req, res) => {
+    const sql = "select * from usuario where id = ?";
+
+    const {id} = req.query;
+
+    db.query(sql, [id], (err, data) => {
+        if(err){
+            console.log("Erro ao processar a requisição.");
+            return res.status(500).json(err);
+        }else{
+            console.log("Dados obtidos com sucesso.");
+            return res.status(200).json(data);
+        }
+    });
+}
+
+export const getUsersByNome = (req, res) => {
+    const sql = "select * from usuario where nome like ?";
+
+    const {nome} = req.query;
+
+    db.query(sql, [nome], (err, data) => {
+        if(err){
+            console.log("Erro ao processar a requisição.");
+            return res.status(500).json(err);
+        }else{
+            console.log("Dados obtidos com sucesso.");
+            return res.status(200).json(data);
+        }
+    });
+}
+
 export const addUser = (req, res) => {
     const sql = "insert into usuario (nome) values (?)";
 
