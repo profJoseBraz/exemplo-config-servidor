@@ -1,8 +1,10 @@
-# Exemplo de configuração de um servidor em node.js usando a biblioteca Express
+# Exemplo de configuração de um servidor em node.js
 
-Este repositório contém a configuração básica de um servidor Express. 
+Este repositório contém a configuração básica de um servidor, ou seja, o necessário para torná-lo operante. 
 
 O objetivo dele é demonstrar aos alunos do curso de Programador Web do Senac de Campo Mourão - PR como funciona a configuração e o funcionamento de um servidor, ou seja, o backend da aplicação.
+
+Ele será implementado utilizando a biblioteca express utilizando a arquitetura REST. Por esse motivo, foram implementadas quatro rotas, uma para cada método (principal) do REST: *GET*, *POST*, *PUT* e *DELETE*. Desta forma, contempla-se também neste projeto um CRUD básico, no qual é possível adicionar, alterar, excluir e adicionar registros no banco de dados.
 
 ## Dependencias do Node
 
