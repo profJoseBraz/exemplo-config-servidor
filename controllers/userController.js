@@ -93,7 +93,7 @@ export const deleteUser = (req, res) => {
             return res.status(500).json(err);
         } else {
             console.log("Usuário removido com sucesso.");
-            return res.status(201).json(data);
+            return res.status(200).json(data);
         }
     });
 }
