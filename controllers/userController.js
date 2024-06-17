@@ -22,7 +22,7 @@ export const getUsers = async (_, res) => {
 export const getUsersById = async (req, res) => {
     const sql = "select * from usuario where id = ?";
 
-    const {id} = req.query;
+    const { id } = req.query;
 
     const conn = await createNewConnection();
 
@@ -43,7 +43,7 @@ export const getUsersById = async (req, res) => {
 export const getUsersByNome = async (req, res) => {
     const sql = "select * from usuario where nome like ?";
 
-    const {nome} = req.query;
+    const { nome } = req.query;
 
     const conn = await createNewConnection();
 
@@ -64,7 +64,7 @@ export const getUsersByNome = async (req, res) => {
 export const addUser = async (req, res) => {
     const sql = "insert into usuario (nome) values (?)";
 
-    const {nome} = req.body;
+    const { nome } = req.body;
 
     const conn = await createNewConnection();
 
@@ -85,7 +85,7 @@ export const addUser = async (req, res) => {
 export const updateUser = async (req, res) => {
     const sql = "update usuario set nome = ? where id = ?";
 
-    const {id, nome} = req.body;
+    const { id, nome } = req.body;
 
     const conn = await createNewConnection();
 
